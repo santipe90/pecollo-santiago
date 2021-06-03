@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
 
 function App() {
+
+  const ecommerceName = 'Cresta FM'
+  const handleLogo = () => alert(`Bienvenido a ${ecommerceName}`)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Santi Pecollo
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CoderHouse
-        </a>
+    <div className='App'>
+      <header className='barnav'>
+        <p classname='logo' onClick={handleLogo}>
+          {ecommerceName}
+          </p>
+        <nav classname='navigation'> 
+          <ul classname='links'>
+
+            <li classname='link'>
+            <a href='http://www.google.com'>Home</a>
+            </li>
+
+            <li classname='link'>
+            <a href='http://www.google.com'>Contenido</a>
+            </li>
+
+            <li classname='link'>
+            <a href='http://www.google.com'>Quienes Somos</a>
+            </li>
+
+            <li classname='link'>
+            <a href='http://www.google.com'>Contacto</a>
+            </li>
+
+            </ul>
+            </nav>
       </header>
     </div>
-  );
+  )
 }
 
 export default App;
