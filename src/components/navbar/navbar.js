@@ -1,13 +1,23 @@
 import './navbar.css'
+import logo from '../../logo.png'
+import carritologo from '../../carritologo.png'
 
 export const Navbar = () => {
     return (
-        <header className='barnav'>
-          <p classname='logo'>Cresta FM
-          </p>
-        <nav classname='navigation'> 
-          <ul classname='links'>
+        <header>
 
+          <nav>
+            <div class="logo">
+              <img src={logo} alt="logo"/>
+              </div> 
+            <input type="search" placeholder="Buscar productos"/>
+            <div class="carritologo">
+            <img src={carritologo} alt="logo"/>
+            </div>
+           </nav>
+
+
+           <ul>
             <li classname='link'>
             <a href='http://www.google.com'>Home</a>
             </li>
@@ -23,9 +33,7 @@ export const Navbar = () => {
             <li classname='link'>
             <a href='http://www.google.com'>Contacto</a>
             </li>
-
             </ul>
-            </nav>
           </header> 
     )
   }
