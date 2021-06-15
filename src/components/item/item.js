@@ -29,9 +29,6 @@ export function Item() {
         });
     }, [])
 
-    handleClick() {
-        console.log('Se hizo click');
-        }
 
         return (
             <div className='App'>
