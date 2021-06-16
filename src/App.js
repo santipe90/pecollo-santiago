@@ -46,7 +46,7 @@ function App() {
          )
          
          }
-      <ItemListContainer/>
+      <ItemListContainer greeting="Saludos"/>
     </div>
   )
 }
