@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import remenegra from '../../img/RB.jpg'
 
-
 export function Item() {
     
     const getRemes = (remeraData) => {
