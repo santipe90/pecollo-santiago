@@ -20,6 +20,11 @@ export function Item() {
         img: { remenegra }
       }
     ]
+
+   // const handleClick = () => 
+   // alert(`Gracias por comprar`)
+
+
 // use effect usa funcion y frecuencia
     useEffect(() => {
         getRemes( remeraData ).then(result => {
