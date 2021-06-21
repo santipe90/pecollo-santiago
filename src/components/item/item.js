@@ -21,8 +21,7 @@ export function Item() {
       }
     ]
 
-   // const handleClick = () => 
-   // alert(`Gracias por comprar`)
+   const handleClick = () => alert(`Gracias por comprar`)
 
 
 // use effect usa funcion y frecuencia
