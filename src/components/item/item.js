@@ -59,7 +59,17 @@ export const Item = () => {
             <div className='App'>
                 <h1>Remera</h1>
                 <button onClick={handleClick}>Comprar</button>
-                <h2>{remeraData}</h2>
+                {remeraData.map((product) => (
+        <remeraData
+        name={product.name}
+        price={product.price}
+        description={product.description} 
+        />
+    
+         )
+         )
+         
+         }
             </div>
         )
         }
