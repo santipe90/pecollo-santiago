@@ -1,37 +1,59 @@
 import React, { useEffect, useState } from "react";
 import remenegra from '../../img/RB.jpg'
 
-export function Item() {
-    
-    const getRemes = (remeraData) => {
-        return new Promise((resolve, reject) => {
-          setTimeout(() => {
-            return resolve(remeraData)
-          }, 2000)
-        })
-    }
+const remeraData = [
+    {
+    name: 'Remera Cresta',
+    description: 'Color negro',
+    price: 1200,
+    stock: 5,
+    img: { remenegra }
+  },
+  {
+    name: 'Remera Cresta',
+    description: 'Color negro',
+    price: 1200,
+    stock: 5,
+    img: { remenegra }
+  },
+  {
+    name: 'Remera Cresta',
+    description: 'Color negro',
+    price: 1200,
+    stock: 5,
+    img: { remenegra }
+  }
+]
 
-    const remeraData = [
-        {
-        name: 'Remera Cresta',
-        description: 'Color negro',
-        price: 1200,
-        stock: 5,
-        img: { remenegra }
-      }
-    ]
 
-   const handleClick = () => alert(`Gracias por comprar`)
+const getRemes = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        return resolve(remeraData)
+      }, 2000)
+    })
+}
 
 
+//item no tiene que hablar con las promises, para eso container
 // use effect usa funcion y frecuencia
+
+
+export const Item = () => {
+    
+   // usestate para ver una transformacion en pantalla
+
+   const [remeras,setRemeras] = useState([])
+
     useEffect(() => {
-        getRemes( remeraData ).then(result => {
+        getRemes().then(result => {
             console.log(result)
-            getRemes(result);
+            setRemeras(result);
         });
     }, [])
 
+
+    const handleClick = () => alert(`Gracias por comprar`)
 
         return (
             <div className='App'>
@@ -43,3 +65,5 @@ export function Item() {
         }
 
         export default Item
+
+        //container y componente dummy
