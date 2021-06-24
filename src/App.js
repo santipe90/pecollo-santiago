@@ -1,52 +1,24 @@
 import './App.css'
+import { Switch, Route } from "react-router-dom";
 import { Navbar } from './components/navbar/navbar'
-import { ItemListContainer } from './components/itemlistcontainer/itemlistcontainer'
-import { Product } from './components/product/product'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
 
-  const products = [
-    {
-      title: 'Remera Classic Cresta',
-      price: 1200,
-      description: 'Color Negro'
-      
-    },
-    {
-      title: 'Remera New Cresta',
-      price: 1200,
-      description: 'Color Amarillo'
-      
-    },
-    {
-      title: 'Remera Oldie Cresta',
-      price: 1200,
-      description: 'Color Blanco'
-      
-    },
-    {
-      title: 'Remera Classic2 Cresta',
-      price: 1200,
-      description: 'Color Verde'
-      
-    },
-      ]
-
   return (
     <div className='App'>
-      <Navbar />
-      {products.map((product) => (
-        <Product
-        title={product.title}
-        price={product.price}
-        description={product.description} 
-        />
-    
-         )
-         )
-         
-         }
-      <ItemListContainer greeting="Saludos"/>
+      <Switch>
+      <Route exact path="/">
+           <Navbar />
+      </Route>
+      <Route exact path='/category/:id'>
+           <ItemListContainer/>
+      </Route>
+      <Route exact path='/item/:id'>
+           <ItemDetailContainer/>
+      </Route>
+      </Switch>
     </div>
   )
 }

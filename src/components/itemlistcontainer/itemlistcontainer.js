@@ -1,14 +1,24 @@
 //import { Counter } from '../itemcounter/itemcounter'
-import { Item } from '../item/item'
+import React, { useEffect, useState } from "react";
+import { Item } from "../Item/Item";
+import { ItemList } from '../ItemList/ItemList'
+
+
 export const ItemListContainer = (props) => {
 
-    const handleClick = () => 
-    alert(`Saludos ${props.greeting} `)
+    const getRemes = () => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            return resolve(Item)
+          }, 2000)
+        })
+    }
 
-    return (
-    <div onClick={handleClick}>
-        <h2>{props.greeting}</h2>
-        <h2><Item/></h2>
+
+
+return (
+    <div>
+        <ItemList/>
     </div>
 )
 }
