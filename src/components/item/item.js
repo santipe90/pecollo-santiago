@@ -1,7 +1,7 @@
 import React from "react";
 import remenegra from '../../img/RN.jpg';
 import remeblanca from '../../img/RB.jpg';
-import remerosa from '../../img/RS.jpeg';
+import remerose from '../../img/RS.jpeg';
 
 export const Item = (props) => [
     {
@@ -23,7 +23,7 @@ export const Item = (props) => [
     description: 'Color Rosa',
     price: 1200,
     stock: 5,
-    img: { remerosa }
+    img: { remerose }
   }
 ]
  
